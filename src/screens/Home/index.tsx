@@ -1,5 +1,7 @@
 import React from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { Text, TextInput, Button } from "react-native";
+
+import Input from "../../components/Input";
 
 import { Container } from "./styles";
 
@@ -8,14 +10,14 @@ const Home: React.FC = () => {
     <Container>
       <Text testID="title">Home</Text>
 
-      <TextInput
+      <Input
         testID="input-name"
         value="Wilson"
         placeholder="Name"
         autoCorrect={false}
       />
 
-      <TextInput placeholder="Last name" />
+      <Input placeholder="Last name" />
 
       <Button title="Save" onPress={() => {}} />
     </Container>

@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 
-import Home from "../../screens/Home";
+import Home from "./";
 
 describe("Home Screen", () => {
   it("should text input with 'Name' placeholder exists", () => {
@@ -17,7 +17,7 @@ describe("Home Screen", () => {
 
     const inputName = getByTestId("input-name");
 
-    expect(inputName.props.value).toBe("Wilson");
+    expect(inputName.props.children.props.value).toBe("Wilson");
   });
 
   it("should render screen title", () => {
