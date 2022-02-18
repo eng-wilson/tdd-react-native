@@ -4,7 +4,9 @@ import { render } from "@testing-library/react-native";
 import Home from "../../screens/Home";
 
 it("should text input with 'Name' placeholder exists", () => {
-  const { debug } = render(<Home />);
+  const { getByPlaceholderText } = render(<Home />);
 
-  debug();
+  const inputName = getByPlaceholderText("Name");
+
+  expect(inputName).toBeTruthy;
 });
