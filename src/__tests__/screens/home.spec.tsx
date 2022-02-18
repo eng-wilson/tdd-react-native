@@ -3,26 +3,28 @@ import { render } from "@testing-library/react-native";
 
 import Home from "../../screens/Home";
 
-it("should text input with 'Name' placeholder exists", () => {
-  const { getByPlaceholderText } = render(<Home />);
+describe("Home Screen", () => {
+  it("should text input with 'Name' placeholder exists", () => {
+    const { getByPlaceholderText } = render(<Home />);
 
-  const inputName = getByPlaceholderText("Name");
+    const inputName = getByPlaceholderText("Name");
 
-  expect(inputName).toBeTruthy;
-});
+    expect(inputName).toBeTruthy;
+  });
 
-it("should render user info", () => {
-  const { getByTestId } = render(<Home />);
+  it("should render user info", () => {
+    const { getByTestId } = render(<Home />);
 
-  const inputName = getByTestId("input-name");
+    const inputName = getByTestId("input-name");
 
-  expect(inputName.props.value).toBe("Wilson");
-});
+    expect(inputName.props.value).toBe("Wilson");
+  });
 
-it("should render screen title", () => {
-  const { getByTestId } = render(<Home />);
+  it("should render screen title", () => {
+    const { getByTestId } = render(<Home />);
 
-  const title = getByTestId("title");
+    const title = getByTestId("title");
 
-  expect(title.props.children).toBe("Home");
+    expect(title.props.children).toBe("Home");
+  });
 });
