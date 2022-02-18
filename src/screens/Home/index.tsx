@@ -8,7 +8,12 @@ const Home: React.FC = () => {
     <Container>
       <Text>Home</Text>
 
-      <TextInput placeholder="Name" autoCorrect={false} />
+      <TextInput
+        testID="input-name"
+        value="Wilson"
+        placeholder="Name"
+        autoCorrect={false}
+      />
 
       <TextInput placeholder="Last name" />
 
