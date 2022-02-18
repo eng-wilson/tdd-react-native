@@ -18,3 +18,11 @@ it("should render user info", () => {
 
   expect(inputName.props.value).toBe("Wilson");
 });
+
+it("should render screen title", () => {
+  const { getByTestId } = render(<Home />);
+
+  const title = getByTestId("title");
+
+  expect(title.props.children).toBe("Home");
+});

@@ -6,7 +6,7 @@ import { Container } from "./styles";
 const Home: React.FC = () => {
   return (
     <Container>
-      <Text>Home</Text>
+      <Text testID="title">Home</Text>
 
       <TextInput
         testID="input-name"
